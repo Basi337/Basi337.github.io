@@ -132,7 +132,7 @@
 
 /* Footer Styles */
 body {
-    padding-bottom: 60px; /* Space for the footer */
+    padding-bottom: 60px;
 }
 
 .footer {
@@ -150,20 +150,19 @@ body {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    width: 450px; /* Adjust the width as needed */
+    width: 450px;
     margin-left: 350px;
     margin-bottom: 150px;
     animation: footer 5s ease-out forwards;
 }
 
-/* Hide the footer image on small screens */
+
 @media (max-width: 768px) {
     .footer img {
         display: none;
     }
 }
 
-/* Animations */
 @keyframes battery-charge {
     0% { width: 0%; background-color: #da1e2a; }
     25% { width: 25%; background-color: #da5c1e; }
