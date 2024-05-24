@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
+    <title>Photovoltaik Manager</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Photovoltaik Manager</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="battery mt-3">
+                    <div class="battery-body">
+                        <div id="batteryCharge" class="battery-charge"></div>
+                    </div>
+                </div>
+                <div class="input-group mt-3">
+                    <input type="number" class="form-control" id="percentageInput" placeholder="Enter percentage">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" onclick="updateBatteryPercentageFromInput()">Set Percentage</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-3">
+                <div id="data-display">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Current Input: <span id="current-input">0</span> kW</h5>
+                            <h5 class="card-title">Current Output: <span id="current-output">0</span> kW</h5>
+                            <h5 class="card-title">Battery Status: <span id="battery-status">0</span> %</h5>
+                            <h5 class="card-title">Time until battery empty/full: <span id="battery-time">N/A</span></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Energy Usage</h5>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="timeInput" placeholder="Enter hours/days">
+                            <select class="custom-select" id="timeUnit">
+                                <option value="hours">Hours</option>
+                                <option value="days">Days</option>
+                            </select>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="calculateEnergyUsage()">Calculate</button>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Energy Consumed: <span id="energy-used">0</span> kWh</h5>
+                        <div class="input-group mb-3">
+                            <input type="date" class="form-control" id="startDate">
+                            <input type="date" class="form-control" id="endDate">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" onclick="calculateEnergyUsageBetweenDates()">Calculate</button>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Energy Consumed Between Dates: <span id="energy-used-between">0</span> kWh</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Made with <span style="color: red;">❤️</span> by Sebastian Hammerl
+        <img src="image.png" alt="Footer Image">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

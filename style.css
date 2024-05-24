@@ -1,0 +1,199 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #001f3f;
+    border-color: #001f3f;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.navbar-brand {
+    color: #00ff00;
+    animation: navbar-dropdown 2s ease-out forwards;
+    padding-top: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #00ff00;
+    margin-left: 30px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #007bff;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: #007bff;
+}
+
+.navbar-toggler-icon {
+    background-color: #00ff00;
+}
+
+.form-control {
+    background-color: #fff;
+    color: #495057;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-inline {
+    margin-top: 7px;
+    margin-left: 30px;
+}
+
+.btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+    background-color: #ffffff00;
+}
+
+.btn-outline-success:hover {
+    color: #ffffff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.navbar-nav {
+    margin-right: auto;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
+/* Battery Styles */
+.battery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.battery {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.battery-body {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 130px;
+    height: 51px;
+    border: 4px solid #000000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.battery-body::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    width: 20px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 2px;
+}
+
+.battery-charge {
+    height: 100%;
+    width: 0%;
+    background-color: #da1e2a;
+    border-radius: 6px;
+    transition: width 1s;
+}
+
+.input-group {
+    margin-left: 20px;
+}
+
+.input-group .form-control {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.input-group .percentageBtn {
+    flex-shrink: 0;
+    background-color: #28bd4b9d;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Footer Styles */
+body {
+    padding-bottom: 60px; /* Space for the footer */
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #343A40;
+    color: #ffffff;
+}
+
+.footer img {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 450px; /* Adjust the width as needed */
+    margin-left: 350px;
+    margin-bottom: 150px;
+    animation: footer 5s ease-out forwards;
+}
+
+/* Hide the footer image on small screens */
+@media (max-width: 768px) {
+    .footer img {
+        display: none;
+    }
+}
+
+/* Animations */
+@keyframes battery-charge {
+    0% { width: 0%; background-color: #da1e2a; }
+    25% { width: 25%; background-color: #da5c1e; }
+    50% { width: 50%; background-color: #dacc1e; }
+    75% { width: 75%; background-color: #bfda1e; }
+    100% { width: 100%; background-color: #79da1e; }
+}
+
+@keyframes navbar-dropdown {
+    from { transform: translateX(-250px); }
+    to { transform: translateY(0);}
+}
+
+@keyframes footer {
+    from { transform: translateX(-1000px)}
+    to {transform: translateX(0px);}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        margin-left: 0;
+    }
+
+    .form-inline {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .battery-body {
+        width: 80%;
+    }
+}
