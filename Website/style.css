@@ -111,7 +111,19 @@
     width: 0%;
     background-color: #da1e2a;
     border-radius: 6px;
-    transition: width 1s;
+    transition: width 1s, background-color 1s;
+}
+
+.battery-charge.low {
+    background-color: #da1e2a;
+}
+
+.battery-charge.medium {
+    background-color: #dacc1e;
+}
+
+.battery-charge.high {
+    background-color: #79da1e;
 }
 
 .input-group {
@@ -151,24 +163,15 @@ body {
     bottom: 10px;
     left: 10px;
     width: 450px;
-    margin-left: 350px;
+    margin-left: 20%;
     margin-bottom: 150px;
     animation: footer 5s ease-out forwards;
 }
-
 
 @media (max-width: 768px) {
     .footer img {
         display: none;
     }
-}
-
-@keyframes battery-charge {
-    0% { width: 0%; background-color: #da1e2a; }
-    25% { width: 25%; background-color: #da5c1e; }
-    50% { width: 50%; background-color: #dacc1e; }
-    75% { width: 75%; background-color: #bfda1e; }
-    100% { width: 100%; background-color: #79da1e; }
 }
 
 @keyframes navbar-dropdown {

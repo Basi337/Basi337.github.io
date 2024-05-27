@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
     <title>Photovoltaik Manager</title>
 </head>
 <body>
@@ -39,9 +39,9 @@
                     </div>
                 </div>
                 <div class="input-group mt-3">
-                    <input type="number" class="form-control" id="percentageInput" placeholder="Enter percentage">
+                    <input type="number" class="form-control" id="energyId" placeholder="Enter ID">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" onclick="updateBatteryPercentageFromInput()">Set Percentage</button>
+                        <button class="btn btn-outline-secondary" id="setPercentageBtn" type="button">Choose ID</button>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                                 <option value="days">Days</option>
                             </select>
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onclick="calculateEnergyUsage()">Calculate</button>
+                                <button class="btn btn-outline-secondary" id="calculateEnergyUsageBtn" type="button">Calculate</button>
                             </div>
                         </div>
                         <h5 class="card-title">Energy Consumed: <span id="energy-used">0</span> kWh</h5>
@@ -74,7 +74,7 @@
                             <input type="date" class="form-control" id="startDate">
                             <input type="date" class="form-control" id="endDate">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onclick="calculateEnergyUsageBetweenDates()">Calculate</button>
+                                <button class="btn btn-outline-secondary" id="calculateEnergyUsageBetweenDatesBtn" type="button">Calculate</button>
                             </div>
                         </div>
                         <h5 class="card-title">Energy Consumed Between Dates: <span id="energy-used-between">0</span> kWh</h5>
@@ -88,9 +88,5 @@
         Made with <span style="color: red;">❤️</span> by Sebastian Hammerl
         <img src="image.png" alt="Footer Image">
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

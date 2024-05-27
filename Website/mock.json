@@ -1,0 +1,28 @@
+[
+    {
+      "input": 12,
+      "output": 15,
+      "battery": 80
+    },
+    {
+      "input": 14,
+      "output": 12,
+      "battery": 30
+    },
+    {
+      "input": 10,
+      "output": 16,
+      "battery": 95
+    },
+    {
+      "input": 11,
+      "output": 18,
+      "battery": 50
+    },
+    {
+      "input": 15,
+      "output": 14,
+      "battery": 20
+    }
+  ]
+  
